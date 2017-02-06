@@ -51,3 +51,11 @@ bat %>%
   group_by(Bioregion, Season) %>%
   summarise(mean_Cg = mean(Chgouldii),
             se_Cg = se(Chgouldii))
+
+#Convert the catergorical variables Moon, NatEx and Bioregion to factors
+dplyr::mutate(bat, Moon = as.factor(Moon))
+dplyr::mutate(bat, NatEx = as.factor(NatEx))
+dplyr::mutate(bat, Bioregion = as.factor(Bioregion))
+
+
+
