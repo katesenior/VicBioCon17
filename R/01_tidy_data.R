@@ -23,3 +23,9 @@ View(bat)
 dplyr::filter(bat, Season == 1)
 
 dplyr::filter(bat, Season == 1, Chgouldii > 100)
+
+dplyr::select(bat, Site, Habitat, Season, Chgouldii)
+
+select(bat, starts_with("dist"))
+
+dplyr::mutate(bat, Taust_Vdarl = Taustralis + Vdarlingtoni)
