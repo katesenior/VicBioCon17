@@ -19,3 +19,7 @@ View(iris)
 bat <- readr::read_csv("./data/bat_dat.csv")
 
 View(bat)
+
+dplyr::filter(bat, Season == 1)
+
+dplyr::filter(bat, Season == 1, Chgouldii > 100)
