@@ -3,3 +3,15 @@
 library("tidyverse")
 
 readr::read_csv("./data/bat_dat.csv")
+
+iris <- read_csv("./data/iris_data.csv", comment = "#", 
+         col_types = cols(
+           Sepal.Length = col_double(),
+           Sepal.Width = col_double(),
+           Petal.Length = col_double(),
+           Petal.Width = col_double(),
+           Species = col_factor(c("setosa", "versicolor", "virginica"))
+         ))
+dplyr::glimpse(iris)
+
+View(iris)
