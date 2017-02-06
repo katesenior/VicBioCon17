@@ -15,3 +15,7 @@ iris <- read_csv("./data/iris_data.csv", comment = "#",
 dplyr::glimpse(iris)
 
 View(iris)
+
+bat <- readr::read_csv("./data/bat_dat.csv")
+
+View(bat)
