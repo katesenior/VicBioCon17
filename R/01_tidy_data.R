@@ -28,4 +28,12 @@ dplyr::select(bat, Site, Habitat, Season, Chgouldii)
 
 select(bat, starts_with("dist"))
 
+#New column name on left hand side, combinations used to compute new variable on right
+#Can subtract variables too, just add - sign in front of them
+#To replace variable include exisiting variable name on both sides of columm and what you want to do to it on the right
 dplyr::mutate(bat, Taust_Vdarl = Taustralis + Vdarlingtoni)
+
+#Summarise mean of gould's wattled bat- ouput mean with other data dropped
+summarise(bat, mean_Chgouldii = mean(Chgouldii))
+
+
